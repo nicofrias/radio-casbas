@@ -2,7 +2,7 @@ imagesArray = [
     'https://cdn.pixabay.com/photo/2019/07/06/18/17/radio-4320926_1280.jpg',
     'https://www.shutterstock.com/image-photo/professional-microphone-sound-mixer-radio-600nw-1948354897.jpg',
     'https://live365.com/img/broadcaster/pillarGuide/chapter-2-1.jpg',
-    'https://www.shutterstock.com/image-photo/background-radio-station-podcasters-professional-260nw-443635471.jpg',
+    'https://www.unc.edu.ar/sites/default/files/medios_radio_TV_comunicacion-02.jpg',
     'https://www.shutterstock.com/image-photo/professional-microphone-headphones-radio-station-600nw-2411760711.jpg'
     ]
     
