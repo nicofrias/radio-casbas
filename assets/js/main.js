@@ -85,14 +85,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
             audio.pause();
-            playPauseBtn.textContent = 'Escuchar';
+            playPauseBtn.textContent = 'Play';
         }
     });
 
     stopBtn.addEventListener('click', function () {
         audio.pause();
         audio.currentTime = 0;
-        playPauseBtn.textContent = 'Escuchar';
+        playPauseBtn.textContent = 'Play';
     });
 
     volumeControl.addEventListener('input', function () {
