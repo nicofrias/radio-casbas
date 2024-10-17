@@ -7,6 +7,8 @@ imagesArray = [
     ]
     
     document.addEventListener("DOMContentLoaded", () => {
+
+    // Imagen de portada
     const img = document.querySelector(".image-container");
     countImg = 0;
     
@@ -18,45 +20,86 @@ imagesArray = [
     nextImg();
     setInterval(nextImg, 10000);
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const audio = document.getElementById('audio');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const stopBtn = document.getElementById('stopBtn');
-        const volumeControl = document.createElement('input');
+    // Botón programación
+    const programacion = document.querySelector('#btn-programacion');
+    const mainProgramacion = document.querySelector('.main__container');
 
-        volumeControl.type = 'range';
-        volumeControl.min = 0;
-        volumeControl.max = 1;
-        volumeControl.step = 0.1;
-        volumeControl.value = audio.volume;
-        volumeControl.id = 'volumeControl';
+    arrayProgramas = [
+        {
+            title: 'Las Mañanas de la Radio',
+            hours: 'Lunes a VIernes de 08:00 a 10:30'
+        },
+        {
+            title: 'programa 2',
+            hours: 'horarios'
+        },
+        {
+            title: 'programa 3',
+            hours: 'horarios'
+        }
+    ]
 
-        const audioContainer = document.querySelector('.audio-container');
-        audioContainer.appendChild(volumeControl);
+    const programacionProgramas = document.createElement('div');
+    programacionProgramas.classList.add('programacion');
 
-        playPauseBtn.addEventListener('click', function () {
-            if (audio.paused) {
-                audio.play();
-                playPauseBtn.textContent = 'Pausar';
-            } else {
-                audio.pause();
-                playPauseBtn.textContent = 'Escuchar';
+    arrayProgramas.forEach((programa) => {
+        programacionProgramas.innerHTML += `
+            <div class="programacion-programas">
+            <h4>${programa.title}</h4>
+            <p>${programa.hours}</p>
+            <hr>
+            </div>
+        `;
+    });
+
+    let agregado = false;
+
+    programacion.addEventListener('click', () => {
+        if (agregado) {
+            const programaElement = mainProgramacion.querySelector('.programacion');
+            if (programaElement) {
+                mainProgramacion.removeChild(programaElement);
             }
-        });
-
-        stopBtn.addEventListener('click', function () {
-            audio.pause();
-            audio.currentTime = 0;
-            playPauseBtn.textContent = 'Escuchar';
-        });
-
-        volumeControl.addEventListener('input', function () {
-            audio.volume = volumeControl.value;
-        });
-
-        audio.addEventListener('volumechange', function () {
-            volumeControl.value = audio.volume;
-        });
+            agregado = false;
+        } else {
+            mainProgramacion.appendChild(programacionProgramas);
+            agregado = true;
+        }
     });
 })
     
+
+// Audio
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.querySelector('#audio');
+    const playPauseBtn = document.querySelector('#playPauseBtn');
+    const stopBtn = document.querySelector('#stopBtn');
+    const volumeControl = document.querySelector('#volumeControl');
+
+    playPauseBtn.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play().then(() => {
+                playPauseBtn.textContent = 'Pausar';
+            }).catch(error => {
+                console.error('Error al intentar reproducir el audio:', error);
+            });
+        } else {
+            audio.pause();
+            playPauseBtn.textContent = 'Escuchar';
+        }
+    });
+
+    stopBtn.addEventListener('click', function () {
+        audio.pause();
+        audio.currentTime = 0;
+        playPauseBtn.textContent = 'Escuchar';
+    });
+
+    volumeControl.addEventListener('input', function () {
+        audio.volume = volumeControl.value;
+    });
+
+    audio.addEventListener('volumechange', function () {
+        volumeControl.value = audio.volume;
+    });
+});

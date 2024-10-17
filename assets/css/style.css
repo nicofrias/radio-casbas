@@ -18,6 +18,14 @@ header {
     font-size: 2rem;
 }
 
+.btn-custom-main {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
 .main__container {
     flex: 1;
     display: flex;
@@ -128,6 +136,26 @@ header {
     border-radius: 50%;
     width: auto;
     height: auto;
+}
+
+.programacion {
+    position: absolute;
+    z-index: 10000;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 40rem;
+    height: 40rem;
+    border-radius: 25px;
+}
+
+.programacion-programas {
+    padding: 2rem;
+    text-align: left;
+}
+
+.programacion-programas h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
