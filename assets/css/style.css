@@ -148,6 +148,31 @@ header {
     width: 40rem;
     height: 40rem;
     border-radius: 25px;
+    overflow-y: scroll;
+    overflow-clip-margin: 10px;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.programacion:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.programacion::-webkit-scrollbar {
+    width: 8px;
+}
+
+.programacion::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.programacion::-webkit-scrollbar-thumb {
+    background: #dc3545;
+    border-radius: 10px;
+}
+
+.programacion::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
 }
 
 .programacion-programas {

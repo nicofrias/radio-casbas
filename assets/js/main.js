@@ -26,16 +26,48 @@ imagesArray = [
 
     arrayProgramas = [
         {
-            title: 'Las Mañanas de la Radio',
-            hours: 'Lunes a VIernes de 08:00 a 10:30'
+            title: 'Patricio Flaherty',
+            hours: 'Lunes a Viernes de 08:00 a 10:30hs.'
         },
         {
-            title: 'programa 2',
-            hours: 'horarios'
+            title: 'La mañana de la radio',
+            hours: 'Lunes a VIernes de 10:30 a 12:00hs.'
         },
         {
-            title: 'programa 3',
-            hours: 'horarios'
+            title: 'Una copla en la llanura',
+            hours: 'Lunes a Viernes de 12:00 a 14:00hs.'
+        },
+        {
+            title: 'El retrovisor',
+            hours: 'Lunes a Viernes de 14:00 a 16:00hs.'
+        },
+        {
+            title: 'Nestor y la movida tropical',
+            hours: 'Lunes a Viernes de 16:00 a 18:00hs.'
+        },
+        {
+            title: 'Para que aprendas',
+            hours: 'Lunes a Viernes de 18:00 a 20hs.'
+        },
+        {
+            title: 'Conectados a la musica con Fabian Quintana',
+            hours: 'Lunes a Viernes a partir de las 20hs.'
+        },
+        {
+            title: 'Raices gauchas',
+            hours: 'Miercoles a partir de las 21:00hs.'
+        },
+        {
+            title: 'Razones para vivir',
+            hours: 'Viernes de 17:00 a 19:00hs.'
+        },
+        {
+            title: 'Kalelo Lugo y el bailantazo',
+            hours: 'Sabados y domingos a partir de 18:00hs.'
+        },
+        {
+            title: 'El baul de los recuerdos',
+            hours: 'Domingo de 8:00 a 13:00hhs.'
         }
     ]
 
