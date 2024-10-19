@@ -1,24 +1,24 @@
-imagesArray = [
-    'https://cdn.pixabay.com/photo/2019/07/06/18/17/radio-4320926_1280.jpg',
-    'https://www.shutterstock.com/image-photo/professional-microphone-sound-mixer-radio-600nw-1948354897.jpg',
-    'https://live365.com/img/broadcaster/pillarGuide/chapter-2-1.jpg',
-    'https://www.unc.edu.ar/sites/default/files/medios_radio_TV_comunicacion-02.jpg',
-    'https://www.shutterstock.com/image-photo/professional-microphone-headphones-radio-station-600nw-2411760711.jpg'
-    ]
+// imagesArray = [
+//     'https://cdn.pixabay.com/photo/2019/07/06/18/17/radio-4320926_1280.jpg',
+//     'https://www.shutterstock.com/image-photo/professional-microphone-sound-mixer-radio-600nw-1948354897.jpg',
+//     'https://live365.com/img/broadcaster/pillarGuide/chapter-2-1.jpg',
+//     'https://www.unc.edu.ar/sites/default/files/medios_radio_TV_comunicacion-02.jpg',
+//     'https://www.shutterstock.com/image-photo/professional-microphone-headphones-radio-station-600nw-2411760711.jpg'
+//     ]
     
     document.addEventListener("DOMContentLoaded", () => {
 
     // Imagen de portada
-    const img = document.querySelector(".image-container");
-    countImg = 0;
+    // const img = document.querySelector(".image-container");
+    // countImg = 0;
     
-    const nextImg = (() => {
-        img.innerHTML = `<img src="${imagesArray[countImg]}" alt="Portada"></img>`;
-        countImg = (countImg + 1) % imagesArray.length;
-    })
+    // const nextImg = (() => {
+    //     img.innerHTML = `<img src="${imagesArray[countImg]}" alt="Portada"></img>`;
+    //     countImg = (countImg + 1) % imagesArray.length;
+    // })
     
-    nextImg();
-    setInterval(nextImg, 10000);
+    // nextImg();
+    // setInterval(nextImg, 10000);
 
     // Botón programación
     const programacion = document.querySelector('#btn-programacion');
