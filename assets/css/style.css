@@ -131,8 +131,8 @@ header {
 }
 
 .logo {
-    max-width: 40rem;
-    max-height: 40rem;
+    max-width: 300px;
+    max-height: 300px;
     min-width: 10rem;
     min-height: 10rem;
     border-radius: 50%;
@@ -199,10 +199,10 @@ header {
         align-items: start;
     }
 
-    .logo {
+    /*.logo {
         max-width: 30rem;
         max-height: 30rem;
-    }
+    }*/
 
     .programacion {
         width: 30rem;
